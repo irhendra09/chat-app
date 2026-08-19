@@ -20,7 +20,7 @@ func SetupPostgres() {
 		env.GetEnv("POSTGRES_PORT", "5432"),
 	)
 
-	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
+	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
 	}
